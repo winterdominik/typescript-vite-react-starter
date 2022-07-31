@@ -5,7 +5,9 @@ import App from "./App";
 import "./index.css";
 
 if (process.env.NODE_ENV === "development") {
-  import("./mocks/browser").then((browser) => browser.worker.start());
+  import("./mocks/browser")
+    .then((browser) => browser.worker.start())
+    .catch(() => console.error("Failed to start mock service worker"));
 }
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
