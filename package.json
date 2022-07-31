@@ -48,9 +48,18 @@
     "vite-plugin-stylelint": "^3.0.5"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "**/*.{ts,tsx,json,yml,yaml}": "eslint --fix",
-    "**/*.css": "stylelint --fix"
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "git add"
+    ],
+    "**/*.{ts,tsx,json,yml,yaml}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "msw": {
     "workerDirectory": "public"
