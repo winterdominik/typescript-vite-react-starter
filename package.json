@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "lint": "eslint --ext .ts,.tsx,json '**/*.{ts,tsx,json}'",
     "lint:fix": "eslint --fix --ext .ts,.tsx,json '**/*.{ts,tsx,json}'",
-    "format": "prettier --write '**/*.{ts,tsx,json}'",
+    "format": "prettier --write '**/*.{ts,tsx,json,yml,yaml}'",
     "stylelint-check": "stylelint-config-prettier-check",
     "stylelint": "stylelint '**/*.css'",
     "stylelint:fix": "stylelint --fix '**/*.css'"
@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
-    "**/*.{ts,tsx,json}": "eslint --fix",
+    "**/*.{ts,tsx,json,yml,yaml}": "eslint --fix",
     "**/*.css": "stylelint --fix"
   },
   "msw": {
